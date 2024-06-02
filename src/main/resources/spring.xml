@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="address" class="com.renuka.pojo.Address">
+		<property name="dno" value="1" />
+		<property name="street" value="sai nagar" />
+		<property name="city" value="Anantapur"></property>
+	</bean>
+	<alias name="employee" alias="emp1" />
+		<alias name="employee" alias="emp2" />
+		<alias name="employee" alias="emp3" />
+
+	<bean id="employee" class="com.renuka.pojo.Employee">
+		
+		<property name="empId" value="1" />
+		<property name="empName" value="Renuka" />
+		<property name="salarey" value="45000" />
+		<property name="address" ref="address" />
+		<property name="mobilecontact">
+			<list>
+				<value>9476363671</value>
+				<value>8654362471</value>
+
+			</list>
+		</property>
+	</bean>
+</beans>
