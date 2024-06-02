@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+
+  <bean id="std" class="com.renuka.pojo.Student">
+<property name="sid" value="1001"></property>
+<property name="Name" value="Renuka"></property>
+<property name="marks" value="99"></property>
+ <property name="address" ref="address1"></property>
+</bean> 
+<bean id="address1" class="com.renuka.pojo.Address">
+<property name="dno" value="64"></property>
+<property name="street" value="NarpalaJangamareddypalli"></property>
+<property name="city" value="Anantapur"></property>
+<property name="state" value="A.P"></property>
+<property name="pin" value="515425"></property>
+<property name="country" value="indian"></property>
+
+
+
+</bean>
+
+
+
+</beans>
