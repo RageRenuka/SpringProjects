@@ -1,11 +1,20 @@
 package com.renuka.pojo;
 
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+
 public class Student {
 	
 	private int sid;
 	private String Name;
-	private double marks;
+	
+	private List<Long> mobileContact;
+	private Set<String> subjects;
+	private Map<String,Integer> marks; 
 	private Address address;
+	
+	
 	public int getSid() {
 		return sid;
 	}
@@ -18,10 +27,22 @@ public class Student {
 	public void setName(String name) {
 		Name = name;
 	}
-	public double getMarks() {
+	public List<Long> getMobileContact() {
+		return mobileContact;
+	}
+	public void setMobileContact(List<Long> mobileContact) {
+		this.mobileContact = mobileContact;
+	}
+	public Set<String> getSubjects() {
+		return subjects;
+	}
+	public void setSubjects(Set<String> subjects) {
+		this.subjects = subjects;
+	}
+	public Map<String, Integer> getMarks() {
 		return marks;
 	}
-	public void setMarks(double marks) {
+	public void setMarks(Map<String, Integer> marks) {
 		this.marks = marks;
 	}
 	public Address getAddress() {
@@ -32,8 +53,13 @@ public class Student {
 	}
 	@Override
 	public String toString() {
-		return "Student [sid=" + sid + ", Name=" + Name + ", marks=" + marks + ", address=" + address + "]";
+		return "Student [sid=" + sid + ", Name=" + Name + ", mobileContact=" + mobileContact + ", subjects=" + subjects
+				+ ", marks=" + marks + ", address=" + address + "]";
 	}
+	
+	
+	
+	
 	
 	
 

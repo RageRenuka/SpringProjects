@@ -6,10 +6,16 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 
 
-  <bean id="std" class="com.renuka.pojo.Student">
+ <!--  <bean id="std" class="com.renuka.pojo.Student">
 <property name="sid" value="1001"></property>
 <property name="Name" value="Renuka"></property>
 <property name="marks" value="99"></property>
+ <property name="address" ref="address1"></property>
+</bean>
+ <bean id="std1" class="com.renuka.pojo.Student">
+<property name="sid" value="1002"></property>
+<property name="Name" value="Radha"></property>
+<property name="marks" value="98"></property>
  <property name="address" ref="address1"></property>
 </bean> 
 <bean id="address1" class="com.renuka.pojo.Address">
@@ -19,11 +25,42 @@ http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
 <property name="state" value="A.P"></property>
 <property name="pin" value="515425"></property>
 <property name="country" value="indian"></property>
+</bean> -->
 
-
-
+<bean id="std" class="com.renuka.pojo.Student">
+<property name="sid" value="1231"></property>
+<property name="name" value="Renuka"></property>
+<property name="mobileContact">
+<list>
+<value>9652496154</value>
+<value>8639594434</value>
+</list>
+</property>
+<property name="subjects">
+<set>
+<value>Telugu</value>
+<value>English</value>
+<value>Hindi</value>
+</set>
+</property>
+<property name="marks">
+<map>
+<entry key="Telugu" value="100"></entry>
+<entry key="English" value="76"></entry>
+<entry key="Hindi" value="90"></entry>
+</map>
+</property>
+ <property name="Address" ref="address1"></property>
 </bean>
 
+<bean id="address1" class="com.renuka.pojo.Address">
+<property name="dno" value="64"></property>
+<property name="street" value="NarpalaJangamareddypalli"></property>
+<property name="city" value="Anantapur"></property>
+<property name="state" value="A.P"></property>
+<property name="pin" value="515425"></property>
+<property name="country" value="indian"></property>
+</bean>
 
 
 </beans>
